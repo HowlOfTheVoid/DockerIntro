@@ -13,15 +13,16 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: us.icr.io/<my_namespace>/hello-world:1
+        image: us.icr.io/sn-labs-ehgraupmann/hello-world:1
         ports:
         - containerPort: 8080
+          name: http
         resources:
           limits:
-            cpu: 2m
+            cpu: 50m
             memory: 30Mi
           requests:
-            cpu: 1m
+            cpu: 20m
             memory: 10Mi  
         
       imagePullSecrets:
